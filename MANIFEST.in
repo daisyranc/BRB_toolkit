@@ -1,0 +1,8 @@
+include README.md README.zh-CN.md requirements*.txt example_config.yaml
+recursive-include examples *.py *.json *.ipynb *.md
+recursive-include scripts *.py
+recursive-include tests *.py
+recursive-include docs *.md *.json
+global-exclude *.pyc
+global-exclude *.pyo
+prune examples/notebooks/.ipynb_checkpoints

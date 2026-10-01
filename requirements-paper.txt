@@ -1,0 +1,7 @@
+-r requirements.txt
+scipy>=1.11
+pytest>=8
+nbformat>=5.10
+nbclient>=0.10
+ipykernel>=6.29
+matplotlib>=3.8

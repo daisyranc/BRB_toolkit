@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "brb-toolkit"
+version = "0.1.0"
+description = "A simple, trainable Belief Rule Base toolkit with ER aggregation."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=1.24",
+  "pandas>=2.0",
+  "torch>=2.1",
+  "PyYAML>=6.0",
+  "openpyxl>=3.1",
+  "pyarrow>=14.0"
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["brb*"]

@@ -1,0 +1,38 @@
+{
+  "date": "2026-10-01",
+  "python": "3.12.14",
+  "versions": {
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "torch": "2.14.1",
+    "pytest": "9.1.1",
+    "nbformat": "5.11.1",
+    "nbclient": "0.11.0",
+    "ipykernel": "7.4.0"
+  },
+  "max_absolute_errors": {
+    "R06_intermediate": 3.704530723325217e-05,
+    "R06_complete_X9": 6.447142424526042e-05,
+    "R06_incomplete_X9": 1.2693015207169978e-05,
+    "M25_table18": 5.5094582010861703e-05,
+    "M25_trustworthiness": 4.758073931465656e-05
+  },
+  "paper_parameters_recomputed_objectives": [
+    0.013552545574619112,
+    0.0062004686269841285
+  ],
+  "notebooks": [
+    {
+      "name": "01_brb_modelling_paper.ipynb",
+      "executed_code_cells": 10
+    },
+    {
+      "name": "02_rimer_inference_paper.ipynb",
+      "executed_code_cells": 10
+    },
+    {
+      "name": "03_maker_paper.ipynb",
+      "executed_code_cells": 10
+    }
+  ]
+}

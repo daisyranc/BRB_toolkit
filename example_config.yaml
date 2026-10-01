@@ -1,0 +1,20 @@
+target: ClaimNb
+task: regression
+attribute_weight_mode: global
+missing_strategy: rule_marginalization
+dtype: float64
+attributes:
+  - name: Age
+    kind: numeric
+    reference_points: [18, 30, 50, 80]
+    adaptive: true
+  - name: VehiclePower
+    kind: numeric
+    reference_points: [4, 7, 10, 15]
+    adaptive: true
+  - name: Region
+    kind: categorical
+    reference_points: [R1, R2, R3]
+    adaptive: false
+consequent_refs: [0.0, 0.1, 0.3, 0.6, 1.0, 2.0]
+metadata: {}

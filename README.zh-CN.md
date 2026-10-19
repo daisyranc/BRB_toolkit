@@ -146,22 +146,6 @@ python -m examples.maker_training
 python scripts/execute_paper_notebooks.py
 ```
 
-## 验证与限制
-
-RIMER 石墨容器推理案例和 MAKER 诊断 Table 18 使用独立转录的纸面数值进行对照，并注明舍入容差。训练示例报告求解状态、目标值和约束残差。
-
-MAKER 复现了论文推理表，但**论文报告训练目标的精确复现尚未解决**。将公开的舍入参数重新代入目标函数，所得目标值与正文报告不同；notebook 同时展示这些数值及本地 SLSQP 结果。局部优化不保证全局最优，也不保证返回与原求解器相同的参数。
-
-运行代表性的核心与推理测试：
-
-```bash
-python -m pytest tests/test_core.py tests/test_rimer_inference.py tests/test_maker_combination.py -q
-```
-
-工具包面向研究及可复现实验。PyTorch 核心与约束训练器采用不同参数化及缺失输入语义：BRB 的规则边缘化与 RIMER 的显式不完整信念处理应分别理解。
-
-规则及焦元空间会指数增长，RIMER 对生成规则数设限，MAKER 对焦元数设限。目前不提供自动规则结构搜索、通用图形编辑器或任意联合依赖结构的自动恢复。
-
 ## 目录结构
 
 ```text
@@ -187,6 +171,12 @@ requirements-paper.txt            完整示例及约束训练依赖
 - Yang, J.-B., Liu, J., Xu, D.-L., Wang, J., and Wang, H.-W. (2007). *Optimization Models for Training Belief-Rule-Based Systems*. [DOI: 10.1109/TSMCA.2007.897606](https://doi.org/10.1109/TSMCA.2007.897606)。
 - Yang, J.-B., and Xu, D.-L. (2025). *Maximum Likelihood Evidential Reasoning*. [DOI: 10.1016/j.artint.2025.104289](https://doi.org/10.1016/j.artint.2025.104289)。
 
-报告实验时，应说明使用的模块、目标、依赖假设及求解器设置，并引用相应方法论文。
+公式映射与数值验证: [formula_map.md](docs/formula_map.md).
 
-公式映射与数值验证: [formula_map.md](docs/formula_map.md), [validation.md](docs/validation.md).
+## 开发状态
+
+本工具包目前正处于积极开发阶段。BRB、RIMER 和 MAKER 的实现（包括基于 PyTorch 的 CPU 及 GPU 训练功能）目前正在接受审查、测试与完善。随着改进工作的推进，代码库将定期进行更新。
+
+我们还计划增加一至两个基于公开数据集的端到端示例，涵盖数据预处理、模型配置、训练、测试及评估等环节。这些示例将在后续更新中加入，旨在展示本工具包的实际应用方式。
+
+请注意，当前版本仅为初步版本，后续的改进工作及文档更新正在持续进行中。

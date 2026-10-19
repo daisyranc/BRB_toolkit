@@ -146,21 +146,6 @@ Execute all paper notebooks in fresh kernels and save outputs:
 python scripts/execute_paper_notebooks.py
 ```
 
-## Verification and limitations
-
-The RIMER graphite-container inference example and MAKER diagnosis Table 18 are checked against independently transcribed paper values at stated rounding tolerances. Training examples report solver status, objective values, and constraint residuals.
-
-MAKER reproduces the published inference table, but **exact reproduction of the reported training objectives remains unresolved**. Re-evaluating the published rounded parameters gives objectives different from those reported in the paper. The notebook presents both alongside local SLSQP results. Local optimisation does not guarantee global optimality or identical parameters to the original solver.
-
-Run representative core and inference tests:
-
-```bash
-python -m pytest tests/test_core.py tests/test_rimer_inference.py tests/test_maker_combination.py -q
-```
-
-The toolkit is intended for research and reproducible experimentation. The PyTorch core and constrained trainers use different parameterisations and missing-input semantics: BRB rule marginalisation differs from RIMER's explicit incomplete-belief handling.
-
-Rule and focal-set spaces grow exponentially. RIMER limits generated rules; MAKER limits focal-set counts. Automatic rule-structure search, a general-purpose graphical editor, and automatic recovery of arbitrary joint dependence structures are outside the current scope.
 
 ## Project layout
 

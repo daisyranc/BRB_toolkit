@@ -183,3 +183,7 @@ This toolkit is **under active development**. The implementations of BRB, RIMER,
 We also plan to add one or two end-to-end examples using publicly available datasets, covering data preprocessing, model configuration, training, testing, and evaluation. These examples will be included in upcoming updates to demonstrate the practical use of the toolkit.
 
 Please note that the current release is preliminary, and further improvements and documentation updates are ongoing.
+
+## License
+
+This project is released under the [MIT License](LICENSE).

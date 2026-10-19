@@ -1,6 +1,6 @@
 # BRB Toolkit
 
-A Python toolkit for belief rule base modelling, evidential reasoning, and parameter learning. It provides a differentiable BRB core, paper-based RIMER (**R**ule-base **I**nference **M**ethodology using the **E**vidential **R**easoning) inference and constrained training, and MAKER (**MA**ximum li**K**elihood **E**vidential **R**easoning) evidence combination and learning.
+A Python toolkit for belief rule base modelling, evidential reasoning, and parameter learning. It provides a differentiable BRB (**B**elief-**R**ule **B**ased) core, paper-based RIMER (**R**ule-base **I**nference **M**ethodology using the **E**vidential **R**easoning) inference and constrained training, and MAKER (**MA**ximum li**K**elihood **E**vidential **R**easoning) evidence combination and learning.
 
 ## Overview
 

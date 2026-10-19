@@ -64,5 +64,6 @@ class RIMERConfig:
         if not np.allclose(self.rule_beliefs[self.complete_rules].sum(1),1): raise ValueError('Complete rule beliefs must sum to one.')
         if self.connective not in ('and','or'): raise ValueError('Only and/or connectives are supported.')
         if self.utilities is not None:
-            self.utilities=np.asarray(self.utilities,float)
+            # Utilities are trainable model parameters, not a shared template.
+            self.utilities=np.array(self.utilities,dtype=float,copy=True)
             if self.utilities.shape!=(len(self.consequents),) or not np.isfinite(self.utilities).all(): raise ValueError('Invalid utilities.')

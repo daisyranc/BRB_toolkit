@@ -5,3 +5,5 @@ from .results import RIMERResult
 from .hierarchy import RIMERNode,HierarchicalRIMER
 from .trainer import RIMERTrainer
 from .objectives import RIMERSupervision
+from .torch_backend import TorchRIMERBackend, TorchRIMERResult
+from .torch_trainer import TorchRIMERTrainer

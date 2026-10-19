@@ -189,4 +189,12 @@ requirements-paper.txt            Full demo and constrained-training dependencie
 
 When reporting experiments, identify the module, objective, dependence assumptions, and solver settings, and cite the relevant methodological papers.
 
-Formula mapping and numerical validation: [formula_map.md](docs/formula_map.md), [validation.md](docs/validation.md).
+Formula mapping and numerical validation: [formula_map.md](docs/formula_map.md)
+
+## Development Status
+
+This toolkit is **under active development**. The implementations of BRB, RIMER, and MAKER, including PyTorch-based CPU and GPU training, are currently being reviewed, tested, and refined. The repository will be updated regularly as improvements are made.
+
+We also plan to add one or two end-to-end examples using publicly available datasets, covering data preprocessing, model configuration, training, testing, and evaluation. These examples will be included in upcoming updates to demonstrate the practical use of the toolkit.
+
+Please note that the current release is preliminary, and further improvements and documentation updates are ongoing.

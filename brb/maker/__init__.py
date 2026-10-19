@@ -8,3 +8,5 @@ from .training_data import ObservationGroup,MAKERTrainingData
 from .objectives import paper_objectives
 from .trainer import MAKERTrainer
 from .acquisition import EvidenceAcquisition
+from .torch_backend import TorchMAKERBackend
+from .torch_trainer import TorchMAKERTrainer

@@ -1,6 +1,5 @@
 # Examples and paper demos
 
-**English** | [简体中文](README.zh-CN.md) | [Toolkit overview](../README.md)
 
 This directory contains a synthetic BRB regression example, an insurance workflow template, and three notebooks illustrating paper-based modelling, inference, and learning.
 
